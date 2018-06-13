@@ -1,0 +1,79 @@
+.title {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* =========RWD 大絕招==================== */
+
+.menu-desktop {
+    display: block;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+/* ============================= */
+
+.frame {
+    /* 主版置中 width:1200px;margin:0px auto; */
+    width: 1200px;
+    margin: 0px auto;
+    /* 框內元素置中對齊 */
+    text-align: center;
+}
+
+.box {
+    /* margin相鄰之間的距離 */
+    width: 260px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #ffcccc;
+}
+
+/* CSS 3 Media Query (RWD最重要的工具)*/
+
+/* 500px~1200px */
+
+@media(max-width:1200px) {
+    /* 當螢幕尺寸小於800px的時候,套用這個區塊的設定 */
+    /* [螢幕小-->大__ mobi-320px-->pad-500px-->computer-1200px-->1920px] */
+    /* width:百分比-會隨著螢幕尺寸變化 */
+    .title {
+        font-size: 45px;
+    }
+    .frame {
+        width: 100%;
+    }
+    .box {
+        /* width:45% */
+        width: 360px;
+    }
+}
+
+/* 0~500px */
+
+@media(max-width:500px) {
+    /* 當螢幕尺寸小於500px的時候,套用這個區塊的設定 */
+    .title {
+        /* 隨螢幕調整字體大小 */
+        font-size: 24px;
+    }
+    /* ============RWD 大絕招================= */
+    .menu-desktop {
+        display: none;
+    }
+    .menu-mobile {
+        display: block;
+    }
+    /* ============================= */
+    .frame {
+        width: 100%;
+    }
+    /* 可適應各手機尺寸縮放 */
+    .box {
+        width: 90%;
+    }
+}
